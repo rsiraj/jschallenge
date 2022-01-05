@@ -15,17 +15,17 @@ console.log(`The name ${name1} is longer than ${name2} by ${(name1.length-name2.
 // MEDIUM
 function mediumFunction() {
     let userText = prompt("Please type in some words", "YELL or whisper or neiTher");
-    if (userText == userText.toLowerCase()) {
+    if (userText.trim() == "" ) {
+        document.getElementById("mediumResult").innerHTML = `You didn't type anything`;
+        console.log(`You didnt type anything`);
+    }
+    else if (userText == userText.toLowerCase()) {
       document.getElementById("mediumResult").innerHTML = `You whispered ${userText}`;
       console.log(`You whispered ${userText}`);
     }
     else if (userText == userText.toUpperCase()) {
         document.getElementById("mediumResult").innerHTML = `You shouted ${userText}`;
         console.log(`You shouted ${userText}`);
-    }
-    else if (!userText ) {
-        document.getElementById("mediumResult").innerHTML = `You didn't type anything`;
-        console.log(`You didnt type anything`);
     }
     else {
         document.getElementById("mediumResult").innerHTML = `You neither shouted nor whispered ${userText}`;
