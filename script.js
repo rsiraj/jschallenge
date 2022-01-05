@@ -67,4 +67,7 @@ function veryhard() {
     else if (mathOperation === "/") {
             console.log(`You used the divide function to divide ${number1} by ${number2} and got ${number1 / number2}`);
     }
+    else {
+        console.log(`You didnt use a correct math function`);
+    }
 }
