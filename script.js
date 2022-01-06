@@ -35,40 +35,49 @@ function mediumFunction() {
 //////////////////////
 
 // HARD: Create 4 math functions, one called add() that adds 2 numbers, one called subtract() that subtracts 2 numbers, one called multiply() to multiply 2 numbers, and one called divide() to divide two numbers.
-function add(number1, number2) {
+let number1;
+let mathOperation;
+let number2;
+
+function add() {
     let hardResult = number1 + number2;
     console.log(`You used the add function to add ${number1} and ${number2} and got ${hardResult}`);
+    console.log(`${number1} ${mathOperation} ${number2} = ${hardResult}`);
 }
-function subtract(number1, number2) {
+function subtract() {
     let hardResult = number1 - number2;
     console.log(`You used the subtract function to subtract ${number1} by ${number2} and got ${hardResult}`);
+    console.log(`${number1} ${mathOperation} ${number2} = ${hardResult}`);
 }
-function multiply(number1, number2) {
+function multiply() {
     let hardResult = number1 * number2;
     console.log(`You used the multiply function to multiply ${number1} and ${number2} and got ${hardResult}`);
+    console.log(`${number1} ${mathOperation} ${number2} = ${hardResult}`);
 }
-function divide(number1, number2) {
+function divide() {
     let hardResult = number1 / number2;
     console.log(`You used the divide function to divide ${number1} by ${number2} and got ${hardResult}`);
+    console.log(`${number1} ${mathOperation} ${number2} = ${hardResult}`);
 }
 
 //VERY HARD: Create a simple calculator that prompts the user for a number, an operator (either +, -, * or /) and another number, and then uses the functions created in the hard challenge to output the value in sentence form. Example output: "3 + 4 = 7"
+
 function veryhard() {
-    let number1 = Number(prompt("Please enter the first number"));
-    let mathOperation = prompt("Please enter +, -, *, or /");
-    let number2 = Number(prompt("Please enter the second number"));
+    number1 = Number(prompt("Please enter the first number"));
+    mathOperation = prompt("Please enter +, -, *, or /");
+    number2 = Number(prompt("Please enter the second number"));
 
     if (mathOperation === "+") {
-        add(number1, number2);
+        add();
     }
     else if (mathOperation === "-") {
-        subtract(number1, number2);
+        subtract();
     }
     else if (mathOperation === "*") {
-        multiply(number1, number2);
+        multiply();
     }
     else if (mathOperation === "/") {
-        divide (number1, number2);
+        divide ();
     }
     else {
         console.log(`You didnt use a correct math function`);
