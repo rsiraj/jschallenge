@@ -36,16 +36,20 @@ function mediumFunction() {
 
 // HARD: Create 4 math functions, one called add() that adds 2 numbers, one called subtract() that subtracts 2 numbers, one called multiply() to multiply 2 numbers, and one called divide() to divide two numbers.
 function add(number1, number2) {
-    console.log(`You used the add function to add ${number1} and ${number2} and got ${number1 + number2}`);
+    let hardResult = number1 + number2;
+    console.log(`You used the add function to add ${number1} and ${number2} and got ${hardResult}`);
 }
 function subtract(number1, number2) {
-    console.log(`You used the subtract function to subtract ${number1} by ${number2} and got ${number1 - number2}`);
+    let hardResult = number1 - number2;
+    console.log(`You used the subtract function to subtract ${number1} by ${number2} and got ${hardResult}`);
 }
 function multiply(number1, number2) {
-    console.log(`You used the multiply function to multiply ${number1} and ${number2} and got ${number1 * number2}`);
+    let hardResult = number1 * number2;
+    console.log(`You used the multiply function to multiply ${number1} and ${number2} and got ${hardResult}`);
 }
 function divide(number1, number2) {
-    console.log(`You used the divide function to divide ${number1} by ${number2} and got ${number1 / number2}`);
+    let hardResult = number1 / number2;
+    console.log(`You used the divide function to divide ${number1} by ${number2} and got ${hardResult}`);
 }
 
 //VERY HARD: Create a simple calculator that prompts the user for a number, an operator (either +, -, * or /) and another number, and then uses the functions created in the hard challenge to output the value in sentence form. Example output: "3 + 4 = 7"
@@ -54,18 +58,17 @@ function veryhard() {
     let mathOperation = prompt("Please enter +, -, *, or /");
     let number2 = Number(prompt("Please enter the second number"));
 
-
     if (mathOperation === "+") {
-            console.log(`You used the add function to add ${number1} and ${number2} and got ${number1 + number2}`);
+        add(number1, number2);
     }
     else if (mathOperation === "-") {
-            console.log(`You used the subtract function to subtract ${number1} by ${number2} and got ${number1 - number2}`);
+        subtract(number1, number2);
     }
     else if (mathOperation === "*") {
-            console.log(`You used the multiply function to multiply ${number1} and ${number2} and got ${number1 * number2}`);
+        multiply(number1, number2);
     }
     else if (mathOperation === "/") {
-            console.log(`You used the divide function to divide ${number1} by ${number2} and got ${number1 / number2}`);
+        divide (number1, number2);
     }
     else {
         console.log(`You didnt use a correct math function`);
